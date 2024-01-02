@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: rgb(2, 100, 2);
+            text-align: center;
+        }
+        body{
+            text-align: center;
+            font-size: 30px;
+            background-color: rgb(157, 215, 248);
+        }
+        #não {
+            font-size: 30px;
+            color: #131212;
+            background-color: #cdf53d;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            }
+        #dinheiro{
+            font-size: 30px;
+            color: rgb(6, 133, 27);
+            cursor: pointer;
+        }    
+    </style>
+</head>
+<body>
+    <h1>PEDIDO IMPORTANTE</h1>
+    <p>Irmã querida, amor da minha vida</p>
+    <p>Você poderia me dar 50 reais?</p>
+    <div id="dinheiro">💰</div>
+    <p></p>
+    <BUTton id = 'não' onmouseover="mudar()"> NÃO</BUTton>
+    
+    <script>
+       var din = window.document.getElementById('dinheiro')  
+       din.addEventListener('click', dinheiro)
+
+       function dinheiro(){
+        din.innerText = 'Muito obrigada irmã querida 💗'
+        din.style.backgroundColor = 'yellow'       
+       }
+       function mudar(){
+            const buttonNão = document.getElementById('não');
+            const randomX = Math.floor(Math.random() * window.innerWidth);
+            const randomY = Math.floor(Math.random() * window.innerHeight);
+            buttonNão.style.left = `${randomX}px`;
+            buttonNão.style.top = `${randomY}px`;
+       }
+    </script>
+</body>
+</html>
